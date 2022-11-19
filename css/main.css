@@ -1,6 +1,88 @@
 /* drie basisstijlregels om je te helpen */
-:root {font-size: 100%;  /* zet je dit op 62.5%, dan is elke rem 10px waard, anders 16px */ }
-html {box-sizing: border-box;}
-*, *:before, *:after {box-sizing: inherit;}
+:root {
+  font-size: 100%; /* zet je dit op 62.5%, dan is elke rem 10px waard, anders 16px */
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 
 /* hier komt jouw css */
+
+/* header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 2em;
+  background-color: #040507;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  min-height: 60px;
+}
+/* navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+/* logo */
+nav .logo {
+  background-image: url(/svg/logo/disneylogo.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+  min-height: 40px;
+  min-width: 60px;
+}
+/* nav links */
+nav ul {
+  display: flex;
+  flex-flow: row nowrap;
+  min-height: 100%;
+  align-items: center;
+  cursor: pointer;
+  gap: 20px;
+}
+nav ul span {
+  display: flex;
+  cursor: pointer;
+}
+nav ul span img {
+  width: 24px;
+  height: 24px;
+  filter: invert();
+}
+nav ul span.hide-icon-mobile {
+  display: none;
+}
+nav ul span a {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  min-height: 100%;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.8px;
+  font-size: 0.8125rem;
+  /*hide the text on mobile*/
+  display: none;
+}
+
+/* nav profile picture */
+nav .profile-picture {
+  min-height: 100%;
+}
+nav .profile-picture img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
