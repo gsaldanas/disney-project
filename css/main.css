@@ -101,6 +101,7 @@ main section {
   display: flex;
   position: absolute;
   top: 80px;
+  transition: all 0.3s linear;
 }
 /* banner movies */
 main section article {
@@ -108,13 +109,13 @@ main section article {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 200px;
+  min-height: 150px;
   width: 100%;
   background-image: url(/images/banner.jpeg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 4px;
+  border-radius: 8px;
   position: relative;
 }
 main section article span {
@@ -124,4 +125,25 @@ main section article span {
   bottom: 15px;
   letter-spacing: 1px;
   font-size: 0.8rem;
+}
+
+/* mediaqueries */
+@media (min-width: 1024px) {
+  nav ul span.hide-icon-mobile {
+    display: flex;
+    align-items: center;
+  }
+  nav ul {
+    gap: 50px;
+  }
+  nav ul span.hide-icon-desktop {
+    display: none;
+  }
+  nav ul span a {
+    display: flex;
+    margin-left: 10px;
+  }
+  main section article {
+    height: 300px;
+  }
 }
