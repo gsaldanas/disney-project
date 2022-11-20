@@ -104,19 +104,23 @@ main section {
   transition: all 0.3s linear;
 }
 /* banner movies */
-main section article {
+main section article.carousel {
   cursor: pointer;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   min-height: 150px;
   width: 100%;
-  background-image: url(/images/banner.jpeg);
+  background-image: url(/images/bannerMarvel.jpeg);
   background-position: center center;
+
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 8px;
   position: relative;
+  /* transform: translateX(100%); */
+  /* opacity: 0.8; */
+  transition: all 0.2s ease 0s;
 }
 main section article span {
   color: white;
@@ -126,8 +130,29 @@ main section article span {
   letter-spacing: 1px;
   font-size: 0.8rem;
 }
-
+/* chevron */
+.chevron-left-box {
+  /* background-color: red; */
+}
+.chevron-left-box img {
+  width: 30px;
+  height: 30px;
+  filter: invert();
+}
+.chevron-right-box {
+  /* background-color: red; */
+}
+.chevron-right-box img {
+  width: 30px;
+  height: 30px;
+  filter: invert();
+}
 /* mediaqueries */
+@media (min-width: 768px) {
+  main section article {
+    height: 200px;
+  }
+}
 @media (min-width: 1024px) {
   nav ul span.hide-icon-mobile {
     display: flex;
@@ -143,7 +168,7 @@ main section article span {
     display: flex;
     margin-left: 10px;
   }
-  main section article {
+  main section article.carousel {
     height: 300px;
   }
 }
