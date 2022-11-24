@@ -10,7 +10,7 @@ app.leftChevron.addEventListener("click", function (e) {
   console.log(e.target);
   let index = app.movieIndex;
   let previous = app.getPrevious(index);
-  let image = `/images/${movies[previous].img}`;
+  let image = `./images/${movies[previous].img}`;
   app.changeImage(image);
   app.movieIndex = previous;
   //change caption
@@ -22,7 +22,7 @@ app.rightChevron.addEventListener("click", function (e) {
   console.log(e.target);
   let index = app.movieIndex;
   let next = app.getNext(index);
-  let image = `/images/${movies[next].img}`;
+  let image = `./images/${movies[next].img}`;
   app.changeImage(image);
   app.movieIndex = next;
 
@@ -56,6 +56,6 @@ app.changeCaption = function (caption) {
 //load window/page function
 window.addEventListener("load", (event) => {
   console.log("page is fully loaded");
-  let image = `/images/${movies[0].img}`;
+  let image = `./images/${movies[0].img}`;
   app.changeImage(image);
 });

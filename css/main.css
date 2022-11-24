@@ -35,7 +35,7 @@ nav {
 }
 /* logo */
 nav .logo {
-  background-image: url(/svg/logo/disneylogo.svg);
+  background-image: url(../svg/logo/disneylogo.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-color: transparent;
@@ -111,7 +111,7 @@ main section article.carousel {
   align-items: center;
   min-height: 150px;
   width: 100%;
-  background-image: url(/images/bannerMarvel.jpeg);
+  background-image: url(../images/bannerMarvel.jpeg);
   background-position: center center;
 
   background-repeat: no-repeat;
